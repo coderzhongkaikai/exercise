@@ -7,7 +7,7 @@ public:
         int l=0,r=-1;
         int res=0;
         while (l<s.size()){
-            if(r+1<s.size()&&freq[s[r+1]]==0)
+            if(r+1<s.size()&&freq[s[r+1]]==0)//if else 作用： 注意是连续字串  不是字串  注意两者区别
                 freq[s[++r]]++;
             else
                 freq[s[l++]]--;
