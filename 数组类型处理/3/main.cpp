@@ -3,7 +3,7 @@ class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
 //        滑动窗口
-        int freq[256]={0};
+        int freq[256]={0} //对应ASCII码;  相当于计数  最后作出判断
         int l=0,r=-1;
         int res=0;
         while (l<s.size()){
