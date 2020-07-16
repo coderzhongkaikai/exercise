@@ -7,7 +7,7 @@ public:
     bool isValid(string s) {
     stack<char> stack;
         for (int i = 0; i <s.size() ; ++i) {
-            if(s[i]=='{'||s[i]=='{'||s[i]=='[')
+            if(s[i]=='('||s[i]=='{'||s[i]=='[')
                 stack.push(s[i]);
             else{
                 if(stack.size()==0)
@@ -20,8 +20,8 @@ public:
                 }else if(s[i]==']'){
                     match='[';
                 }else{
-                    assert(s[i]=='}');
-                    match='{';
+                    assert(s[i]==')');
+                    match='(';
                 }
                 if(c !=match)
                     return false;
